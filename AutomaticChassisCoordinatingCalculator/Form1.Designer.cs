@@ -474,7 +474,7 @@
             // 
             // ecxelbutton
             // 
-            this.ecxelbutton.Location = new System.Drawing.Point(460, 348);
+            this.ecxelbutton.Location = new System.Drawing.Point(454, 348);
             this.ecxelbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ecxelbutton.Name = "ecxelbutton";
             this.ecxelbutton.Size = new System.Drawing.Size(87, 33);
