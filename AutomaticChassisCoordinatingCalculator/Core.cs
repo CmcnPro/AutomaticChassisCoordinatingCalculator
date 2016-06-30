@@ -8,6 +8,8 @@ namespace AutomaticChassisCoordinatingCalculator
         string price;
         string productName;
         string result;
+        string brandName;
+        string model;
 
         public string Price
         {
@@ -48,6 +50,32 @@ namespace AutomaticChassisCoordinatingCalculator
             }
         }
 
+        public string BrandName
+        {
+            get
+            {
+                return brandName;
+            }
+
+            set
+            {
+                brandName = value;
+            }
+        }
+
+        public string Model
+        {
+            get
+            {
+                return model;
+            }
+
+            set
+            {
+                model = value;
+            }
+        }
+
         public void getResponse(string URL)
         {
             if (URL.Contains("tmall"))
@@ -60,24 +88,71 @@ namespace AutomaticChassisCoordinatingCalculator
             this.Result = httpClient.GetStringAsync(urlString).Result.ToString();
         }
 
-        public void getProductName()
+        public void getBrandName(string URL)
+        {
+            HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("UserAgent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36");
+            this.Result = httpClient.GetStringAsync(URL).Result.ToString();
+            var result = Result;
+            Regex r1 = new Regex(">品牌</td><td>[^>]+>");//JD
+            Regex r2 = new Regex(">品牌[^>]+>");//TB,TM
+            if (r1.IsMatch(result))
+            {
+                brandName = r1.Match(result).Value;
+                brandName = brandName.Replace(">品牌</td><td>", "");
+                brandName = brandName.Replace("</td>", "");
+            }else
+            if (r2.IsMatch(result))
+            {
+                brandName = r2.Match(result).Value;
+                brandName = brandName.Replace(">品牌:&nbsp;", "");
+                brandName = brandName.Replace("</li>", "");
+                Regex re = new Regex("(?<=\").*?(?=\")", RegexOptions.None);
+                MatchCollection mc = re.Matches(brandName);
+                foreach (Match ma in mc)
+                {
+                    brandName = ma.Value;
+                    if (URL.Contains("tmall"))
+                    {
+                        string[] _list = brandName.Split(' ');
+                        brandName = _list[0];
+                    }
+                }
+            }
+        }
+
+        public void getModel(string URL)
         {
             var result = Result;
-            Regex r1 = new Regex("<title>[^>]+>");
+            Regex r1 = new Regex(">型号</td><td>[^>]+>");//JD
+            Regex r2 = new Regex("<title>[^>]+>");//TB
             if (r1.IsMatch(result))
-                productName = r1.Match(result).Value;
-            productName = Regex.Replace(productName, @"\s", "");
-            productName = productName.Replace("<title>", "");
-            productName = productName.Replace("-京东</title>", "");
-            productName = productName.Replace("-淘宝网</title>", "");
-            productName = productName.Replace("-tmall.com天猫</title>", "");
+            {
+                model = r1.Match(result).Value;
+                model = model.Replace(">型号</td><td>", "");
+                model = model.Replace("</td>", "");
+            }
+            else if (r2.IsMatch(result))
+            {
+                model = r2.Match(result).Value;
+                Regex re = new Regex("(?<=\").*?(?=\")", RegexOptions.None);
+                MatchCollection mc = re.Matches(model);
+                foreach (Match ma in mc)
+                {
+                    model = ma.Value;
+                }
+                model = Regex.Replace(model, @"\s", "");
+                model = model.Replace("<title>", "");
+                model = model.Replace("-淘宝网</title>", "");
+                model = model.Replace("-tmall.com天猫</title>", "");
+            }
         }
 
         public void getPrice()
         {
             var result = Result;
-            Regex r1 = new Regex(@"<input type=""hidden"" id=""jdPrice"" name=""jdPrice"" value=""[^>]+>");
-            Regex r2 = new Regex(@"<input type=""hidden"" name=""current_price"" value= ""[^>]+>");
+            Regex r1 = new Regex(@"<input type=""hidden"" id=""jdPrice"" name=""jdPrice"" value=""[^>]+>");//JD
+            Regex r2 = new Regex(@"<input type=""hidden"" name=""current_price"" value= ""[^>]+>");//TB
             if (r1.IsMatch(result))
             {
                 price = r1.Match(result).Value;

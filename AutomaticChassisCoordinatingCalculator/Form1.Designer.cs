@@ -74,6 +74,17 @@
             this.total = new System.Windows.Forms.TextBox();
             this.totalButton = new System.Windows.Forms.Button();
             this.ecxelbutton = new System.Windows.Forms.Button();
+            this.cpuModelTextBox = new System.Windows.Forms.TextBox();
+            this.mbModelTextBox = new System.Windows.Forms.TextBox();
+            this.ramModelTextBox = new System.Windows.Forms.TextBox();
+            this.ssdModelTextBox = new System.Windows.Forms.TextBox();
+            this.hddModelTextBox = new System.Windows.Forms.TextBox();
+            this.gpuModelTextBox = new System.Windows.Forms.TextBox();
+            this.psuModelTextBox = new System.Windows.Forms.TextBox();
+            this.cpufanModelTextBox = new System.Windows.Forms.TextBox();
+            this.caseModelTextBox = new System.Windows.Forms.TextBox();
+            this.sysfanModelTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -169,11 +180,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 13);
+            this.label11.Location = new System.Drawing.Point(250, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 17);
+            this.label11.Size = new System.Drawing.Size(78, 17);
             this.label11.TabIndex = 10;
-            this.label11.Text = "ProductName";
+            this.label11.Text = "BrandName";
             // 
             // label12
             // 
@@ -288,7 +299,7 @@
             this.cpuNameTextBox.Location = new System.Drawing.Point(221, 31);
             this.cpuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpuNameTextBox.Name = "cpuNameTextBox";
-            this.cpuNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.cpuNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.cpuNameTextBox.TabIndex = 22;
             // 
             // mbNameTextBox
@@ -296,7 +307,7 @@
             this.mbNameTextBox.Location = new System.Drawing.Point(221, 62);
             this.mbNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mbNameTextBox.Name = "mbNameTextBox";
-            this.mbNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.mbNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.mbNameTextBox.TabIndex = 23;
             // 
             // ramNameTextBox
@@ -304,7 +315,7 @@
             this.ramNameTextBox.Location = new System.Drawing.Point(221, 92);
             this.ramNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ramNameTextBox.Name = "ramNameTextBox";
-            this.ramNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.ramNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.ramNameTextBox.TabIndex = 24;
             // 
             // ssdNameTextBox
@@ -312,7 +323,7 @@
             this.ssdNameTextBox.Location = new System.Drawing.Point(221, 122);
             this.ssdNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ssdNameTextBox.Name = "ssdNameTextBox";
-            this.ssdNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.ssdNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.ssdNameTextBox.TabIndex = 25;
             // 
             // hddNameTextBox
@@ -320,7 +331,7 @@
             this.hddNameTextBox.Location = new System.Drawing.Point(221, 152);
             this.hddNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hddNameTextBox.Name = "hddNameTextBox";
-            this.hddNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.hddNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.hddNameTextBox.TabIndex = 26;
             // 
             // gpuNameTextBox
@@ -328,7 +339,7 @@
             this.gpuNameTextBox.Location = new System.Drawing.Point(221, 182);
             this.gpuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpuNameTextBox.Name = "gpuNameTextBox";
-            this.gpuNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.gpuNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.gpuNameTextBox.TabIndex = 27;
             // 
             // psuNameTextBox
@@ -336,7 +347,7 @@
             this.psuNameTextBox.Location = new System.Drawing.Point(221, 212);
             this.psuNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.psuNameTextBox.Name = "psuNameTextBox";
-            this.psuNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.psuNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.psuNameTextBox.TabIndex = 28;
             // 
             // sysfanNameTextBox
@@ -344,7 +355,7 @@
             this.sysfanNameTextBox.Location = new System.Drawing.Point(221, 302);
             this.sysfanNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sysfanNameTextBox.Name = "sysfanNameTextBox";
-            this.sysfanNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.sysfanNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.sysfanNameTextBox.TabIndex = 29;
             // 
             // cpufanNameTextBox
@@ -352,7 +363,7 @@
             this.cpufanNameTextBox.Location = new System.Drawing.Point(221, 242);
             this.cpufanNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cpufanNameTextBox.Name = "cpufanNameTextBox";
-            this.cpufanNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.cpufanNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.cpufanNameTextBox.TabIndex = 29;
             // 
             // caseNameTextBox
@@ -360,7 +371,7 @@
             this.caseNameTextBox.Location = new System.Drawing.Point(221, 272);
             this.caseNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.caseNameTextBox.Name = "caseNameTextBox";
-            this.caseNameTextBox.Size = new System.Drawing.Size(401, 23);
+            this.caseNameTextBox.Size = new System.Drawing.Size(155, 23);
             this.caseNameTextBox.TabIndex = 30;
             // 
             // cpuPrice
@@ -483,11 +494,111 @@
             this.ecxelbutton.UseVisualStyleBackColor = true;
             this.ecxelbutton.Click += new System.EventHandler(this.ecxelbutton_Click);
             // 
+            // cpuModelTextBox
+            // 
+            this.cpuModelTextBox.Location = new System.Drawing.Point(393, 31);
+            this.cpuModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cpuModelTextBox.Name = "cpuModelTextBox";
+            this.cpuModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.cpuModelTextBox.TabIndex = 44;
+            // 
+            // mbModelTextBox
+            // 
+            this.mbModelTextBox.Location = new System.Drawing.Point(393, 62);
+            this.mbModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mbModelTextBox.Name = "mbModelTextBox";
+            this.mbModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.mbModelTextBox.TabIndex = 45;
+            // 
+            // ramModelTextBox
+            // 
+            this.ramModelTextBox.Location = new System.Drawing.Point(393, 92);
+            this.ramModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ramModelTextBox.Name = "ramModelTextBox";
+            this.ramModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.ramModelTextBox.TabIndex = 46;
+            // 
+            // ssdModelTextBox
+            // 
+            this.ssdModelTextBox.Location = new System.Drawing.Point(393, 122);
+            this.ssdModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ssdModelTextBox.Name = "ssdModelTextBox";
+            this.ssdModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.ssdModelTextBox.TabIndex = 47;
+            // 
+            // hddModelTextBox
+            // 
+            this.hddModelTextBox.Location = new System.Drawing.Point(393, 152);
+            this.hddModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.hddModelTextBox.Name = "hddModelTextBox";
+            this.hddModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.hddModelTextBox.TabIndex = 48;
+            // 
+            // gpuModelTextBox
+            // 
+            this.gpuModelTextBox.Location = new System.Drawing.Point(393, 182);
+            this.gpuModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gpuModelTextBox.Name = "gpuModelTextBox";
+            this.gpuModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.gpuModelTextBox.TabIndex = 49;
+            // 
+            // psuModelTextBox
+            // 
+            this.psuModelTextBox.Location = new System.Drawing.Point(393, 212);
+            this.psuModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.psuModelTextBox.Name = "psuModelTextBox";
+            this.psuModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.psuModelTextBox.TabIndex = 50;
+            // 
+            // cpufanModelTextBox
+            // 
+            this.cpufanModelTextBox.Location = new System.Drawing.Point(393, 242);
+            this.cpufanModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cpufanModelTextBox.Name = "cpufanModelTextBox";
+            this.cpufanModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.cpufanModelTextBox.TabIndex = 51;
+            // 
+            // caseModelTextBox
+            // 
+            this.caseModelTextBox.Location = new System.Drawing.Point(393, 272);
+            this.caseModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.caseModelTextBox.Name = "caseModelTextBox";
+            this.caseModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.caseModelTextBox.TabIndex = 52;
+            // 
+            // sysfanModelTextBox
+            // 
+            this.sysfanModelTextBox.Location = new System.Drawing.Point(393, 302);
+            this.sysfanModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sysfanModelTextBox.Name = "sysfanModelTextBox";
+            this.sysfanModelTextBox.Size = new System.Drawing.Size(209, 23);
+            this.sysfanModelTextBox.TabIndex = 53;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(478, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 17);
+            this.label14.TabIndex = 54;
+            this.label14.Text = "Model";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 394);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.sysfanModelTextBox);
+            this.Controls.Add(this.caseModelTextBox);
+            this.Controls.Add(this.cpufanModelTextBox);
+            this.Controls.Add(this.psuModelTextBox);
+            this.Controls.Add(this.gpuModelTextBox);
+            this.Controls.Add(this.hddModelTextBox);
+            this.Controls.Add(this.ssdModelTextBox);
+            this.Controls.Add(this.ramModelTextBox);
+            this.Controls.Add(this.mbModelTextBox);
+            this.Controls.Add(this.cpuModelTextBox);
             this.Controls.Add(this.ecxelbutton);
             this.Controls.Add(this.totalButton);
             this.Controls.Add(this.total);
@@ -591,6 +702,17 @@
         private System.Windows.Forms.TextBox total;
         private System.Windows.Forms.Button totalButton;
         private System.Windows.Forms.Button ecxelbutton;
+        private System.Windows.Forms.TextBox cpuModelTextBox;
+        private System.Windows.Forms.TextBox mbModelTextBox;
+        private System.Windows.Forms.TextBox ramModelTextBox;
+        private System.Windows.Forms.TextBox ssdModelTextBox;
+        private System.Windows.Forms.TextBox hddModelTextBox;
+        private System.Windows.Forms.TextBox gpuModelTextBox;
+        private System.Windows.Forms.TextBox psuModelTextBox;
+        private System.Windows.Forms.TextBox cpufanModelTextBox;
+        private System.Windows.Forms.TextBox caseModelTextBox;
+        private System.Windows.Forms.TextBox sysfanModelTextBox;
+        private System.Windows.Forms.Label label14;
     }
 }
 
