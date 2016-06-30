@@ -22,6 +22,7 @@ You'll need .NET Framework 4.5 or later to use the precompiled binaries. To buil
 
 ##Update Note
 2016-6-30
-
-  remove productName,add brandName and model
-  将产品名改为品牌和型号,现在已独立出来
+```
+remove productName,add brandName and model
+将产品名改为品牌和型号,现在已独立出来
+ ```
